@@ -4,16 +4,21 @@ import com.sdl.selenium.bootstrap.form.Form;
 import com.sdl.selenium.utils.config.WebDriverConfig;
 import com.sdl.selenium.web.SearchType;
 import com.sdl.selenium.web.WebLocator;
+import com.sdl.selenium.web.WebLocatorDriverExecutor;
 import com.sdl.selenium.web.button.InputButton;
 import com.sdl.selenium.web.form.ComboBox;
 import com.sdl.selenium.web.form.TextField;
 import com.sdl.selenium.web.link.WebLink;
+import com.thoughtworks.selenium.webdriven.ElementFinder;
 import com.zikyo.utils.TestUtils;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -24,6 +29,8 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 public class GenericSteps {
     private static final Logger LOGGER = LoggerFactory.getLogger(GenericSteps.class);
+    private ElementFinder driver;
+
     @Given("^I open \"([^\"]*)\"$")
     public void openUrl(String url) {
         WebDriverConfig.getDriver().get(url);
@@ -49,7 +56,7 @@ public class GenericSteps {
     @When("^I click on \"([^\"]*)\" button from the section \"([^\"]*)\"$")
     public void I_click_on_element_from_container_with_text(String button, String section) {
         Form form = new Form().setTitle(section);
-        WebLink link = new WebLink(form, button);
+        WebLink link = new WebLink(form).setText(button, SearchType.DEEP_CHILD_NODE_OR_SELF);
         link.assertClick();
     }
 
@@ -74,9 +81,10 @@ public class GenericSteps {
 
     @When("^I type \"([^\"]*)\" into \"([^\"]*)\" field$")
     public void typeIntoField(String value, String label) {
-        TextField field = new TextField().setLabel(label, SearchType.DEEP_CHILD_NODE_OR_SELF);
-        field.setValue(value);
+        TextField field = new TextField().setPlaceholder(label);
+        assertThat("Failed to set value in field.", field.setValue(value));
     }
+
 
     @Then("^field \"([^\"]*)\" should have value \"([^\"]*)\"$")
     public void text_field_with_label_should_have_value(String label, String value) {
@@ -111,4 +119,12 @@ public class GenericSteps {
         ComboBox comboBox = new ComboBox().setLabel(label);
         assertThat("Failed to select " + value, comboBox.select(value));
     }
+    @And("^I select \"([^\"]*)\" in the active drop-down list \"([^\"]*)\"$")
+    public void selectValueInActiveDropdown(String value, String label) {
+        WebLocator parentDiv = new WebLocator().setClasses("active","custom-select");
+        ComboBox comboBox = new ComboBox(parentDiv).setLabel(label).setLabelPosition("//following::");
+        assertThat("Failed to select " + value, comboBox.select(value));
+
+    }
+
 }

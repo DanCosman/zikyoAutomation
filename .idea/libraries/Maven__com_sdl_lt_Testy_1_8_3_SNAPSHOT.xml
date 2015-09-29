@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.sdl.lt:Testy:1.8.3-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/sdl/lt/Testy/1.8.3-SNAPSHOT/Testy-1.8.3-20150928.102049-20.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/sdl/lt/Testy/1.8.3-SNAPSHOT/Testy-1.8.3-20150928.102049-20-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/sdl/lt/Testy/1.8.3-SNAPSHOT/Testy-1.8.3-20150928.102049-20-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

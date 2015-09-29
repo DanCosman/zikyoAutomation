@@ -8,6 +8,23 @@ Feature: Validation test
     And I select "A4" in the drop-down list named "Vehicle Model"
     And I click on element with text "Continue"
     And I click on element with text "Continue"
+    And I wait 1 seconds
+    And I type "fdsasfdas" into "Your First Name" field
+    And I wait 1 seconds
+    And I type "fdsdasdsa" into "Your Last Name" field
+    And I wait 1 seconds
+    And I type "10/10/84" into "mm/dd/yyyy" field
+    And I click on element with text "Male"
+    And I click on element with text "Female"
+    #And I click on element with text "Back"
+    #And I click on element with text "Add another vehicle"
+    #And I wait 2 seconds
+    #And I select "2002" in the active drop-down list "Vehicle Year"
+    #And I select "BMW" in the drop-down list named "Select Make"
+    #And I select "7 Series" in the drop-down list named "Vehicle Model"
+    And I wait 2 seconds
+    And I click on "Continue" button from the section "Drivers"
     And I wait 2 seconds
 
+    And I wait 10 seconds
 
