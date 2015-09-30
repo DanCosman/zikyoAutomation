@@ -9,6 +9,7 @@ import com.sdl.selenium.web.button.InputButton;
 import com.sdl.selenium.web.form.ComboBox;
 import com.sdl.selenium.web.form.TextField;
 import com.sdl.selenium.web.link.WebLink;
+import com.sdl.selenium.web.table.TableRow;
 import com.thoughtworks.selenium.webdriven.ElementFinder;
 import com.zikyo.utils.TestUtils;
 import cucumber.api.java.en.And;
@@ -118,6 +119,18 @@ public class GenericSteps {
     public void selectValueInDropdown(String value, String label) {
         ComboBox comboBox = new ComboBox().setLabel(label);
         assertThat("Failed to select " + value, comboBox.select(value));
+    }
+
+    @And("^I select \"([^\"]*)\" in the drop-down list with label in separate div \"([^\"]*)\"$")
+    public void selectValueInDropdownCustom(String value, String label) {
+        ComboBox comboBox = new ComboBox().setLabel(label).setLabelPosition("//following::");
+        assertThat("Failed to select " + value, comboBox.select(value));
+    }
+
+
+    public static void main(String[] args) {
+        ComboBox comboBox = new ComboBox().setLabel("Education").setLabelPosition("//following::");
+        System.out.println(comboBox.getXPath());
     }
     @And("^I select \"([^\"]*)\" in the active drop-down list \"([^\"]*)\"$")
     public void selectValueInActiveDropdown(String value, String label) {
