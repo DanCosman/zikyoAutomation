@@ -29,7 +29,9 @@ Feature: Validation test
     And I select "Excellent" in the drop-down list with label in separate div "Credit Rating"
     And I select "31" in the drop-down list with label in separate div "Age You Got Your First US Driver's License?"
     And I wait 2 seconds
-
-    And I wait 10 seconds
-
+    And I select "No" in the section "Are you married?" from the "Drivers" form
+    And I select "No" in the section "Is Your License Active?" from the "Drivers" form
+    And I select "Yes" in the section "Do you require SR-22/SR-1P filing?" from the "Drivers" form
+    And I select "Yes" in the section "Tickets or claims in the last 3 years?" from the "Drivers" form
+    And I wait 2 seconds
 

@@ -283,3 +283,106 @@
 
 15:33:43 ERROR: WebLocatorDriverExecutor - InvalidElementStateException in doClick: Yes
 15:33:43 DEBUG: Hooks - ***** END of Scenario: Add your Primary Vehicle 2012 Audi A4 *****
+15:58:04 DEBUG: Hooks - ***** START of Scenario: Add your Primary Vehicle 2012 Audi A4 *****
+15:58:04 INFO : InitDriver - ===============================================================
+15:58:04 INFO : InitDriver - |          Environment : ft
+15:58:04 INFO : InitDriver - |          Browser: chrome
+15:58:04 INFO : InitDriver - |          Browser config file: chrome.properties
+15:58:04 INFO : InitDriver - ===============================================================
+
+15:58:15 ERROR: WebLocatorDriverExecutor - InvalidElementStateException in doClick: Continue
+15:58:15 DEBUG: Hooks - ***** END of Scenario: Add your Primary Vehicle 2012 Audi A4 *****
+15:58:53 DEBUG: Hooks - ***** START of Scenario: Add your Primary Vehicle 2012 Audi A4 *****
+15:58:53 INFO : InitDriver - ===============================================================
+15:58:53 INFO : InitDriver - |          Environment : ft
+15:58:53 INFO : InitDriver - |          Browser: chrome
+15:58:53 INFO : InitDriver - |          Browser config file: chrome.properties
+15:58:53 INFO : InitDriver - ===============================================================
+
+15:59:17 WARN : WebLocatorDriverExecutor - Element not found after 5000 millis; .No
+15:59:17 DEBUG: Hooks - ***** END of Scenario: Add your Primary Vehicle 2012 Audi A4 *****
+15:59:35 DEBUG: Hooks - ***** START of Scenario: Add your Primary Vehicle 2012 Audi A4 *****
+15:59:35 INFO : InitDriver - ===============================================================
+15:59:35 INFO : InitDriver - |          Environment : ft
+15:59:35 INFO : InitDriver - |          Browser: chrome
+15:59:35 INFO : InitDriver - |          Browser config file: chrome.properties
+15:59:35 INFO : InitDriver - ===============================================================
+
+15:59:55 ERROR: WebLocatorDriverExecutor - InvalidElementStateException in doClick: No
+15:59:55 DEBUG: Hooks - ***** END of Scenario: Add your Primary Vehicle 2012 Audi A4 *****
+16:00:24 DEBUG: Hooks - ***** START of Scenario: Add your Primary Vehicle 2012 Audi A4 *****
+16:00:24 INFO : InitDriver - ===============================================================
+16:00:24 INFO : InitDriver - |          Environment : ft
+16:00:24 INFO : InitDriver - |          Browser: chrome
+16:00:24 INFO : InitDriver - |          Browser config file: chrome.properties
+16:00:24 INFO : InitDriver - ===============================================================
+
+16:00:43 ERROR: WebLocatorDriverExecutor - InvalidElementStateException in doClick: Yes
+16:00:44 DEBUG: Hooks - ***** END of Scenario: Add your Primary Vehicle 2012 Audi A4 *****
+16:12:55 DEBUG: Hooks - ***** START of Scenario: Add your Primary Vehicle 2012 Audi A4 *****
+16:12:55 INFO : InitDriver - ===============================================================
+16:12:55 INFO : InitDriver - |          Environment : ft
+16:12:55 INFO : InitDriver - |          Browser: chrome
+16:12:55 INFO : InitDriver - |          Browser config file: chrome.properties
+16:12:55 INFO : InitDriver - ===============================================================
+
+16:13:24 DEBUG: Hooks - ***** END of Scenario: Add your Primary Vehicle 2012 Audi A4 *****
+16:14:37 DEBUG: Hooks - ***** START of Scenario: Add your Primary Vehicle 2012 Audi A4 *****
+16:14:37 INFO : InitDriver - ===============================================================
+16:14:37 INFO : InitDriver - |          Environment : ft
+16:14:37 INFO : InitDriver - |          Browser: chrome
+16:14:37 INFO : InitDriver - |          Browser config file: chrome.properties
+16:14:37 INFO : InitDriver - ===============================================================
+
+16:15:06 DEBUG: Hooks - ***** END of Scenario: Add your Primary Vehicle 2012 Audi A4 *****
+16:16:34 DEBUG: Hooks - ***** START of Scenario: Add your Primary Vehicle 2012 Audi A4 *****
+16:16:34 INFO : InitDriver - ===============================================================
+16:16:34 INFO : InitDriver - |          Environment : ft
+16:16:34 INFO : InitDriver - |          Browser: chrome
+16:16:34 INFO : InitDriver - |          Browser config file: chrome.properties
+16:16:34 INFO : InitDriver - ===============================================================
+
+16:17:03 DEBUG: Hooks - ***** END of Scenario: Add your Primary Vehicle 2012 Audi A4 *****
+16:18:58 DEBUG: Hooks - ***** START of Scenario: Add your Primary Vehicle 2012 Audi A4 *****
+16:18:58 INFO : InitDriver - ===============================================================
+16:18:58 INFO : InitDriver - |          Environment : ft
+16:18:58 INFO : InitDriver - |          Browser: chrome
+16:18:58 INFO : InitDriver - |          Browser config file: chrome.properties
+16:18:58 INFO : InitDriver - ===============================================================
+
+16:19:27 DEBUG: Hooks - ***** END of Scenario: Add your Primary Vehicle 2012 Audi A4 *****
+16:19:54 DEBUG: Hooks - ***** START of Scenario: Add your Primary Vehicle 2012 Audi A4 *****
+16:19:54 INFO : InitDriver - ===============================================================
+16:19:54 INFO : InitDriver - |          Environment : ft
+16:19:54 INFO : InitDriver - |          Browser: chrome
+16:19:54 INFO : InitDriver - |          Browser config file: chrome.properties
+16:19:54 INFO : InitDriver - ===============================================================
+
+16:20:23 DEBUG: Hooks - ***** END of Scenario: Add your Primary Vehicle 2012 Audi A4 *****
+16:20:59 DEBUG: Hooks - ***** START of Scenario: Add your Primary Vehicle 2012 Audi A4 *****
+16:20:59 INFO : InitDriver - ===============================================================
+16:20:59 INFO : InitDriver - |          Environment : ft
+16:20:59 INFO : InitDriver - |          Browser: chrome
+16:20:59 INFO : InitDriver - |          Browser config file: chrome.properties
+16:20:59 INFO : InitDriver - ===============================================================
+
+16:21:19 ERROR: WebLocatorDriverExecutor - InvalidElementStateException in doClick: Continue
+16:21:19 DEBUG: Hooks - ***** END of Scenario: Add your Primary Vehicle 2012 Audi A4 *****
+16:21:47 DEBUG: Hooks - ***** START of Scenario: Add your Primary Vehicle 2012 Audi A4 *****
+16:21:47 INFO : InitDriver - ===============================================================
+16:21:47 INFO : InitDriver - |          Environment : ft
+16:21:47 INFO : InitDriver - |          Browser: chrome
+16:21:47 INFO : InitDriver - |          Browser config file: chrome.properties
+16:21:47 INFO : InitDriver - ===============================================================
+
+16:22:05 ERROR: WebLocatorDriverExecutor - InvalidElementStateException in doClick: Continue
+16:22:05 DEBUG: Hooks - ***** END of Scenario: Add your Primary Vehicle 2012 Audi A4 *****
+16:23:00 DEBUG: Hooks - ***** START of Scenario: Add your Primary Vehicle 2012 Audi A4 *****
+16:23:00 INFO : InitDriver - ===============================================================
+16:23:00 INFO : InitDriver - |          Environment : ft
+16:23:00 INFO : InitDriver - |          Browser: chrome
+16:23:00 INFO : InitDriver - |          Browser config file: chrome.properties
+16:23:00 INFO : InitDriver - ===============================================================
+
+16:23:20 ERROR: WebLocatorDriverExecutor - InvalidElementStateException in doClick: Continue
+16:23:20 DEBUG: Hooks - ***** END of Scenario: Add your Primary Vehicle 2012 Audi A4 *****

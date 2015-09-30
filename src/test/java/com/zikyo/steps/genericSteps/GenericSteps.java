@@ -128,18 +128,26 @@ public class GenericSteps {
         assertThat("Failed to select " + value, comboBox.select(value));
     }
 
-    @And("^I select \"(.+?)\" in the section \"(.+?)\"$")
-    public void selectRadioFromSection(String value, String section){
-        WebLocator parentDiv = new WebLocator().setLabel(section).setLabelPosition("//following::");
-        WebLocator radio = new WebLocator(parentDiv).setLabel(value).setLabelPosition("//preceding-sibling::").setTag("input").setType("radio");
-        radio.assertClick();
+    @And("^I select \"(.+?)\" in the section \"(.+?)\" from the \"(.+?)\" form$")
+    public void selectRadioFromSection(String value, String section, String formTitle){
+        Form parentForm = new Form().setTitle(formTitle);
+        WebLocator parentDiv = new WebLocator(parentForm).setLabel(section).setLabelPosition("//following::").setTag("div");
+        WebLocator radio = new WebLocator().setLabel(value).setLabelPosition("//preceding-sibling::").setTag("input").setType("radio");
+        WebLocator clickableSpan = new WebLocator(parentDiv).setChildNodes(radio);
+        clickableSpan.assertClick();
+    }
+
+    private WebLocator addVisibilityCheck(WebLocator locator) {
+        return locator.setElPathSuffix("visibility", "count(ancestor::*[contains(concat(' ', @class, ' '), ' hide ')])=0");
     }
 
     public static void main(String[] args) {
-        WebLocator parentDiv = new WebLocator().setLabel("Are you married?").setLabelPosition("//following::");
+        Form parentForm = new Form().setTitle("Drivers");
+        WebLocator parentDiv = new WebLocator(parentForm).setLabel("Are you married?").setLabelPosition("//following::");
         WebLocator radio = new WebLocator(parentDiv).setLabel("Yes").setLabelPosition("//preceding-sibling::").setTag("input").setType("radio");
         System.out.println(radio.getXPath());
     }
+
     @And("^I select \"([^\"]*)\" in the active drop-down list \"([^\"]*)\"$")
     public void selectValueInActiveDropdown(String value, String label) {
         WebLocator parentDiv = new WebLocator().setClasses("active","custom-select");
