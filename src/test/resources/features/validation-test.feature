@@ -23,5 +23,6 @@ Feature: Validation test
     #And I select "7 Series" in the drop-down list named "Vehicle Model"
     And I wait 1 seconds
     And I click on "Continue" button from the section "Drivers"
+    And I wait 2 seconds
 
 
