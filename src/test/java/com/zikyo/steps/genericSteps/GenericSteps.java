@@ -1,6 +1,7 @@
 package com.zikyo.steps.genericSteps;
 
 import com.sdl.selenium.bootstrap.form.Form;
+import com.sdl.selenium.extjs3.form.Radio;
 import com.sdl.selenium.utils.config.WebDriverConfig;
 import com.sdl.selenium.web.SearchType;
 import com.sdl.selenium.web.WebLocator;
@@ -127,10 +128,17 @@ public class GenericSteps {
         assertThat("Failed to select " + value, comboBox.select(value));
     }
 
+    @And("^I select \"(.+?)\" in the section \"(.+?)\"$")
+    public void selectRadioFromSection(String value, String section){
+        WebLocator parentDiv = new WebLocator().setLabel(section).setLabelPosition("//following::");
+        WebLocator radio = new WebLocator(parentDiv).setLabel(value).setLabelPosition("//preceding-sibling::").setTag("input").setType("radio");
+        radio.assertClick();
+    }
 
     public static void main(String[] args) {
-        ComboBox comboBox = new ComboBox().setLabel("Education").setLabelPosition("//following::");
-        System.out.println(comboBox.getXPath());
+        WebLocator parentDiv = new WebLocator().setLabel("Are you married?").setLabelPosition("//following::");
+        WebLocator radio = new WebLocator(parentDiv).setLabel("Yes").setLabelPosition("//preceding-sibling::").setTag("input").setType("radio");
+        System.out.println(radio.getXPath());
     }
     @And("^I select \"([^\"]*)\" in the active drop-down list \"([^\"]*)\"$")
     public void selectValueInActiveDropdown(String value, String label) {

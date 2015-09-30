@@ -26,6 +26,10 @@ Feature: Validation test
     And I wait 2 seconds
     And I select "High School Diploma" in the drop-down list with label in separate div "Education"
     And I select "Lawyer" in the drop-down list with label in separate div "Occupation"
+    And I select "Excellent" in the drop-down list with label in separate div "Credit Rating"
+    And I select "31" in the drop-down list with label in separate div "Age You Got Your First US Driver's License?"
     And I wait 2 seconds
+
+    And I wait 10 seconds
 
 
