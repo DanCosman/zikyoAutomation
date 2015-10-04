@@ -1,4 +1,4 @@
-package com.zikyo.steps.genericSteps;
+package com.zikyo.steps;
 
 import com.zikyo.common.InitDriver;
 import cucumber.api.Scenario;

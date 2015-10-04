@@ -24,7 +24,6 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>3.8.1</version>
-            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>com.sdl.lt</groupId>
@@ -35,19 +34,14 @@
             <groupId>info.cukes</groupId>
             <artifactId>cucumber-java</artifactId>
             <version>1.2.0</version>
-            <!--<scope>test</scope>-->
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>info.cukes</groupId>
             <artifactId>cucumber-junit</artifactId>
             <version>1.2.0</version>
-            <!--<scope>test</scope>-->
+            <scope>test</scope>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>org.springframework</groupId>-->
-            <!--<artifactId>spring-test</artifactId>-->
-            <!--<version>3.1.1.RELEASE</version>-->
-        <!--</dependency>-->
     </dependencies>
     <repositories>
         <repository>
@@ -56,59 +50,6 @@
             <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
         </repository>
     </repositories>
-
-    <profiles>
-        <profile>
-            <id>localhost</id>
-            <build>
-                <resources>
-                    <resource>
-                        <directory>src/test/resources/environments/localhost</directory>
-                    </resource>
-                </resources>
-            </build>
-        </profile>
-        <profile>
-            <id>ft</id>
-            <build>
-                <resources>
-                    <resource>
-                        <directory>src/test/resources/environments/ft</directory>
-                    </resource>
-                </resources>
-            </build>
-        </profile>
-        <profile>
-            <id>uat</id>
-            <build>
-                <resources>
-                    <resource>
-                        <directory>src/test/resources/environments/uat</directory>
-                    </resource>
-                </resources>
-            </build>
-        </profile>
-        <profile>
-            <id>staging</id>
-            <build>
-                <resources>
-                    <resource>
-                        <directory>src/test/resources/environments/staging</directory>
-                    </resource>
-                </resources>
-            </build>
-        </profile>
-        <profile>
-            <id>ci</id>
-            <build>
-                <resources>
-                    <resource>
-                        <directory>src/test/resources/environments/ci</directory>
-                    </resource>
-                </resources>
-            </build>
-        </profile>
-    </profiles>
 
     <build>
         <testResources>
