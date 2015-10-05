@@ -1,5 +1,6 @@
 package com.zikyo.common;
 
+import org.apache.commons.lang3.SystemUtils;
 import org.apache.log4j.Logger;
 
 import java.io.FileInputStream;
@@ -35,8 +36,16 @@ public class EnvConfig extends Properties {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        if (SystemUtils.IS_OS_MAC) {
+            System.setProperty("browser.driver.path", System.getProperty("browser.driver.path.mac"));
+        }
+        else if (SystemUtils.IS_OS_LINUX) {
+            System.setProperty("browser.driver.path", System.getProperty("browser.driver.path.linux"));
+        }
     }
 
+    public static String operatingSystem = System.getProperty("os.name");
     public static String testEnvironment;
     public static String testConfigPath;
     public static String browser;

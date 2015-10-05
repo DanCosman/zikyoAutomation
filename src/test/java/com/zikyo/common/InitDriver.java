@@ -15,6 +15,7 @@ public class InitDriver {
     public static void init() throws IOException {
         LOGGER.info("===============================================================");
         LOGGER.info("|          Environment : " + EnvConfig.testEnvironment);
+        LOGGER.info("|          Operating System : " + EnvConfig.operatingSystem);
         LOGGER.info("|          Browser: " + EnvConfig.browser);
         LOGGER.info("|          Browser config file: " + EnvConfig.browserConfigPath);
         LOGGER.info("===============================================================\n");
