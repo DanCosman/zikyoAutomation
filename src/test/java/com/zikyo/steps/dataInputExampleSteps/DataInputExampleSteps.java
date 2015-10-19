@@ -2,6 +2,7 @@ package com.zikyo.steps.dataInputExampleSteps;
 
 import com.zikyo.common.inputData.CheckoutData;
 import com.zikyo.common.inputData.LoginData;
+import com.zikyo.steps.TestBase;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import org.apache.log4j.Logger;
@@ -9,7 +10,7 @@ import org.apache.log4j.Logger;
 /**
  * Created by Archpoet on 9/25/2015.
  */
-public class DataInputExampleSteps {
+public class DataInputExampleSteps extends TestBase {
     private static final Logger LOGGER = Logger.getLogger(DataInputExampleSteps.class);
 
     @And("^I use data pre-defined in config files as an example$")

@@ -12,6 +12,7 @@ import com.sdl.selenium.web.form.TextField;
 import com.sdl.selenium.web.link.WebLink;
 import com.sdl.selenium.web.table.TableRow;
 import com.thoughtworks.selenium.webdriven.ElementFinder;
+import com.zikyo.steps.TestBase;
 import com.zikyo.utils.TestUtils;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -29,7 +30,7 @@ import java.util.List;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-public class GenericSteps {
+public class GenericSteps extends TestBase {
     private static final Logger LOGGER = LoggerFactory.getLogger(GenericSteps.class);
     private ElementFinder driver;
 
