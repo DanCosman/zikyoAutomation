@@ -35,10 +35,12 @@ public class EnvConfig extends Properties {
             browserProperties = new Properties();
             browserProperties.load(browserPropertiesStream);
 
-            if (SystemUtils.IS_OS_MAC) {
-                System.setProperty("browser.driver.path", browserProperties.getProperty("browser.driver.path.mac"));
-            } else if (SystemUtils.IS_OS_LINUX) {
-                System.setProperty("browser.driver.path", browserProperties.getProperty("browser.driver.path.linux"));
+            if (browser.equals("chrome")) {
+                if (SystemUtils.IS_OS_MAC) {
+                    System.setProperty("browser.driver.path", browserProperties.getProperty("browser.driver.path.mac"));
+                } else if (SystemUtils.IS_OS_LINUX) {
+                    System.setProperty("browser.driver.path", browserProperties.getProperty("browser.driver.path.linux"));
+                }
             }
         } catch (IOException e) {
             LOGGER.error(e);
