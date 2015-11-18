@@ -31,7 +31,7 @@ public class EnvConfig extends Properties {
             FileInputStream fileInputStream = new FileInputStream(testConfigPath);
             load(fileInputStream);
 
-            FileInputStream browserPropertiesStream = new FileInputStream(browserConfigPath);
+            FileInputStream browserPropertiesStream = new FileInputStream(RESOURCES_PATH + browserConfigPath);
             browserProperties = new Properties();
             browserProperties.load(browserPropertiesStream);
 
