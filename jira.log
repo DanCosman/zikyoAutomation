@@ -661,3 +661,122 @@ $x("//input[@id='joinEmail']")
 11:01:06 INFO : WebDriverConfig - ===============================================================
 11:01:06 INFO : WebDriverConfig - |          Stopping driver (closing browser)                   |
 11:01:06 INFO : WebDriverConfig - ===============================================================
+13:50:47 INFO : InitDriver - ===============================================================
+13:50:47 INFO : InitDriver - |          Environment : ft
+13:50:47 INFO : InitDriver - |          Operating System : Windows 7
+13:50:47 INFO : InitDriver - |          Browser: chrome
+13:50:47 INFO : InitDriver - |          Browser config file: chrome.properties
+13:50:47 INFO : InitDriver - ===============================================================
+
+13:50:47 DEBUG: WebDriverConfig - File: chrome.properties exists
+13:50:47 INFO : WebDriverConfig - Browser is: chrome
+13:50:47 INFO : WebDriverConfig - 
+	browser=chrome
+	browser.driver.path=src\test\resources\drivers\chromedriver.exe
+	browser.download.dir=src/test/resources/downloads/
+	options.arguments=--lang=en --allow-running-insecure-content --enable-logging --v=1 --test-type
+	options.experimental.profile.default_content_setting_values.automatic_downloads=1
+	options.experimental.download.prompt_for_download=1
+
+13:50:47 INFO : ChromeConfigReader - The properties was load with success: 
+	browser=chrome
+	browser.driver.path=src\test\resources\drivers\chromedriver.exe
+	browser.download.dir=src/test/resources/downloads/
+	options.arguments=--lang=en --allow-running-insecure-content --enable-logging --v=1 --test-type
+	options.experimental.profile.default_content_setting_values.automatic_downloads=1
+	options.experimental.download.prompt_for_download=1
+
+13:50:51 INFO : WebDriverConfig - ===============================================================
+13:50:51 INFO : WebDriverConfig - |          Open Selenium Web Driver 
+13:50:51 INFO : WebDriverConfig - ===============================================================
+
+13:50:52 INFO : WebLocatorConfig - 
+	weblocator.log.containers=false
+	weblocator.log.useClassName=false
+	weblocator.log.xPath=true
+	weblocator.log.retryException=true
+	weblocator.log.suggestions=true
+	weblocator.highlight=true
+	weblocator.generateCssSelector=false
+	weblocator.defaults.renderMillis=5000
+	weblocator.defaults.searchType=contains
+	weblocator.defaults.labelPosition=/parent::*/following-sibling::div[1]//
+	weblocator.min.chars.toType=-1
+	driver.autoClose=true
+	driver.implicitlyWait=150
+	weblocator.log.logXPathEnabled=true
+
+13:50:58 INFO : WebLocator - click on button-nav
+13:51:18 INFO : WebLocator - click on LOGIN
+13:51:38 INFO : WebDriverConfig - ===============================================================
+13:51:38 INFO : WebDriverConfig - |          Stopping driver (closing browser)                   |
+13:51:38 INFO : WebDriverConfig - ===============================================================
+13:56:38 INFO : InitDriver - ===============================================================
+13:56:38 INFO : InitDriver - |          Environment : ft
+13:56:38 INFO : InitDriver - |          Operating System : Windows 7
+13:56:38 INFO : InitDriver - |          Browser: chrome
+13:56:38 INFO : InitDriver - |          Browser config file: chrome.properties
+13:56:38 INFO : InitDriver - ===============================================================
+
+13:56:38 DEBUG: WebDriverConfig - File: chrome.properties exists
+13:56:38 INFO : WebDriverConfig - Browser is: chrome
+13:56:38 INFO : WebDriverConfig - 
+	browser=chrome
+	browser.driver.path=src\test\resources\drivers\chromedriver.exe
+	browser.download.dir=src/test/resources/downloads/
+	options.arguments=--lang=en --allow-running-insecure-content --enable-logging --v=1 --test-type
+	options.experimental.profile.default_content_setting_values.automatic_downloads=1
+	options.experimental.download.prompt_for_download=1
+
+13:56:38 INFO : ChromeConfigReader - The properties was load with success: 
+	browser=chrome
+	browser.driver.path=src\test\resources\drivers\chromedriver.exe
+	browser.download.dir=src/test/resources/downloads/
+	options.arguments=--lang=en --allow-running-insecure-content --enable-logging --v=1 --test-type
+	options.experimental.profile.default_content_setting_values.automatic_downloads=1
+	options.experimental.download.prompt_for_download=1
+
+13:56:42 INFO : WebDriverConfig - ===============================================================
+13:56:42 INFO : WebDriverConfig - |          Open Selenium Web Driver 
+13:56:42 INFO : WebDriverConfig - ===============================================================
+
+13:56:42 INFO : WebLocatorConfig - 
+	weblocator.log.containers=false
+	weblocator.log.useClassName=false
+	weblocator.log.xPath=true
+	weblocator.log.retryException=true
+	weblocator.log.suggestions=true
+	weblocator.highlight=true
+	weblocator.generateCssSelector=false
+	weblocator.defaults.renderMillis=5000
+	weblocator.defaults.searchType=contains
+	weblocator.defaults.labelPosition=/parent::*/following-sibling::div[1]//
+	weblocator.min.chars.toType=-1
+	driver.autoClose=true
+	driver.implicitlyWait=150
+	weblocator.log.logXPathEnabled=true
+
+13:56:49 INFO : WebLocator - click on button-nav
+13:56:52 INFO : WebLocator - click on LOGIN
+13:56:53 DEBUG: WebDriverConfig - Preview tab id: CDwindow-14DCC727-EA50-4FA8-9B16-323A16998621
+13:56:53 INFO : WebDriverConfig - Preview tab title : HairVenture - Login
+13:56:53 DEBUG: WebDriverConfig - Switch to tab id: CDwindow-14DCC727-EA50-4FA8-9B16-323A16998621
+13:56:54 INFO : WebDriverConfig - Current tab title : HairVenture - Login
+13:56:54 INFO : WebLocatorUtils - 
+
+$x("//input[@id='userUsername']")
+
+13:56:54 INFO : WebLocatorDriverExecutor - Set value(userUsername): 'Testare'
+13:56:54 DEBUG: WebDriverConfig - Preview tab id: CDwindow-14DCC727-EA50-4FA8-9B16-323A16998621
+13:56:54 INFO : WebDriverConfig - Preview tab title : HairVenture - Login
+13:56:54 DEBUG: WebDriverConfig - Switch to tab id: CDwindow-14DCC727-EA50-4FA8-9B16-323A16998621
+13:56:54 INFO : WebDriverConfig - Current tab title : HairVenture - Login
+13:56:54 INFO : WebLocatorUtils - 
+
+$x("//input[@id='userPassword']")
+
+13:56:54 INFO : WebLocatorDriverExecutor - Set value(userPassword): '12345678'
+13:56:54 INFO : WebLocator - click on Submit
+13:57:14 INFO : WebDriverConfig - ===============================================================
+13:57:14 INFO : WebDriverConfig - |          Stopping driver (closing browser)                   |
+13:57:14 INFO : WebDriverConfig - ===============================================================

@@ -103,9 +103,12 @@ Feature: Validation test
       And I wait 10 seconds
 
 
-   Scenario: Log In
+   Scenario: LOGIN
      Given I open "http://kedev2.greencloud.center/?SERVICE=SKIN_CARE"
      And I click on element with line-bar "button-nav"
-     And I wait 20 second
+     And I wait 3 second
      And I click on link with text2 "LOGIN"
+     And I type "Testare" into "userUsername" with id
+     And I type "12345678" into "userPassword" with id
+     And I click on button with text "Submit"
      And I wait 20 seconds
