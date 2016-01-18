@@ -1,5 +1,7 @@
 package com.zikyo.steps.genericSteps;
 
+import com.sdl.selenium.WebLocatorSuggestions;
+import com.sdl.selenium.WebLocatorUtils;
 import com.sdl.selenium.bootstrap.form.Form;
 import com.sdl.selenium.extjs3.form.Radio;
 import com.sdl.selenium.utils.config.WebDriverConfig;
@@ -30,6 +32,7 @@ import org.slf4j.LoggerFactory;
 import javax.swing.*;
 import java.util.List;
 
+import static com.sdl.selenium.WebLocatorSuggestions.*;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
@@ -54,9 +57,9 @@ public class GenericSteps extends TestBase {
     }
 
     //public static void main(String[] args) {
-        //WebLink link = new WebLink().setText("Adviser", SearchType.TRIM, SearchType.EQUALS, SearchType.CHILD_NODE);
-        //System.out.println(link.getXPath());
-   // }
+    //WebLink link = new WebLink().setText("Adviser", SearchType.TRIM, SearchType.EQUALS, SearchType.CHILD_NODE);
+    //System.out.println(link.getXPath());
+    // }
 
 
     @When("^I click on link with text2 \"([^\"]*)\"$")
@@ -185,10 +188,16 @@ public class GenericSteps extends TestBase {
     //return locator.setElPathSuffix("visibility", "count(ancestor::*[contains(concat(' ', @class, ' '), ' hide ')])=0");
 
 
-    public static void main (String[] args) {
-        Button button = new Button().setText("Login",SearchType.DEEP_CHILD_NODE_OR_SELF);
-        System.out.println(button.getXPath());
+    //public static void main (String[] args) {
+    //Button button = new Button().setText("Login",SearchType.DEEP_CHILD_NODE_OR_SELF);
+    //System.out.println(button.getXPath());
+    // }
+    public static void main(String[] args) {
+        // TextField field = new TextField().setLabel("What is the payroll commonly known as?").setLabelPosition("//preceding-sibling::").setTag("div");
+        //TextField field = new TextField().setLabel("What is the payroll commonly known as?").setLabelPosition("//following::").setTag("div");
+        //System.out.println(field.getXPath());
     }
+
 
     // public static void I_click_on_element_by_class(String[] args) {
     //   WebLink link = new WebLink().setText("Continue", SearchType.CHILD_NODE);
@@ -235,7 +244,7 @@ public class GenericSteps extends TestBase {
 
     @And("^I click on button with text \"([^\"]*)\"$")
     public void I_click_on_button_with_text(String text) throws Throwable {
-        Button button = new Button().setText(text,SearchType.DEEP_CHILD_NODE_OR_SELF).setVisibility(true);
+        Button button = new Button().setText(text, SearchType.DEEP_CHILD_NODE_OR_SELF).setVisibility(true);
         button.assertClick();
     }
 
@@ -246,12 +255,71 @@ public class GenericSteps extends TestBase {
     }
 
 
-
     @And("^I select \"([^\"]*)\" in the drop-down list \"([^\"]*)\"$")
     public void I_select_in_the_drop_down_list(String value, String label) throws Throwable {
-        ComboBox comboBox = new ComboBox().setLabel(label).setLabel(label,SearchType.DEEP_CHILD_NODE_OR_SELF).setVisibility(true);
+        ComboBox comboBox = new ComboBox().setLabel(label).setLabel(label, SearchType.DEEP_CHILD_NODE_OR_SELF).setVisibility(true);
         assertThat("Failed to select " + value, comboBox.select(value));
     }
 
 
+    @And("^I type \"([^\"]*)\" into \"([^\"]*)\" field with input$")
+    public void I_type_into_field_with_input(String value, String label) throws Throwable {
+        WebLocator container = new WebLocator().setTag("fieldset").setExcludeClasses("repeatPrototype");
+        TextField field = new TextField(container).setLabel(label).setLabelPosition("//following::").setVisibility(true);
+        boolean valueSet = field.setValue(value);
+        assertThat("Failed to set value in field.", valueSet);
+    }
+
+    @And("^I select \"([^\"]*)\" in the drop-down list with container \"([^\"]*)\"$")
+    public void I_select_in_the_drop_down_list_with_container(String value, String label) throws Throwable {
+        WebLocator container = new WebLocator().setTag("fieldset").setExcludeClasses("repeatPrototype");
+        ComboBox comboBox = new ComboBox(container).setLabel(label).setLabel(label, SearchType.DEEP_CHILD_NODE_OR_SELF).setVisibility(true);
+        assertThat("Failed to select " + value, comboBox.select(value));
+    }
+
+
+    @And("^I type \"([^\"]*)\" into \"([^\"]*)\" with id$")
+    public void I_type_into_label(String value, String Id) throws Throwable {
+        WebDriverConfig.switchToLastTab();
+        TextField field = new TextField().setId(Id);
+        WebLocatorUtils.getXPathScript(field);
+        assertThat("Failed to set value in field.", field.setValue(value));
+    }
+
+    @And("^I click on  button with text \"([^\"]*)\" with switch page$")
+    public void I_click_on_button_with_text_with_switch_page(String text) throws Throwable {
+        WebDriverConfig.switchToLastTab();
+        TextField field = new TextField().setPlaceholder(text).setVisibility(true);
+        WebLocatorUtils.getXPathScript(field);
+        field.assertClick();
+
+    }
+
+    @And("^I click on  button with switch page \"([^\"]*)\"$")
+    public void pressButtonAndSwitchTab(String value) {
+        WebDriverConfig.switchToLastTab();
+        InputButton button = new InputButton().setAttribute("value", value);
+        button.assertClick();
+
+
+    }
+
+
+
+    @And("^I click on radio button with text \"([^\"]*)\"$")
+    public void I_click_on_radio_button_with_text(String text) throws Throwable {
+        WebLocator radio = new WebLocator().setAttribute("value", text);
+        WebLocatorUtils.getXPathScript(radio);
+        radio.assertClick();
+    }
+
+    @And("^I click on element with line-bar \"([^\"]*)\"$")
+    public void I_click_on_element_with_line_bar(String Text) throws Throwable {
+        WebLocator parentDiv = new WebLocator(). setBaseCls("button-nav");
+        parentDiv.assertClick();
+    }
 }
+
+
+
+

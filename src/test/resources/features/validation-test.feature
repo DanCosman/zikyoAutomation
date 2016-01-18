@@ -1,48 +1,111 @@
 Feature: Validation test
 
-  Scenario: Nowpensions
-   Given I open "http://staging.nowpensions.com/"
-   #And I click on link with text "Login"
-   And I click on link with text2 "Adviser"
-   And I wait 2 seconds
-   And I click on link with text3 "Login"
+  Scenario: Informations
+    Given I open "http://kedev2.greencloud.center/?SERVICE=SKIN_CARE"
+    And I click on link with text3 "Informations"
+    And I click on link with text3 "Request Appointment"
+    And I wait 3 seconds
+    And I type "John" into "appointment-schedule-first-name" with id
+    And I type "McDonald" into "appointment-schedule-last-name" with id
+    And I type "0771173993" into "appointment-schedule-phone" with id
+    And I type "testare1984@gmail.com" into "appointment-schedule-email" with id
+    And I click on  button with text "First Choice (Required)" with switch page
+    And I click on element with text "21"
+    And I click on  button with text "Click here to select an appointment time" with switch page
     And I wait 2 seconds
-    And I type "testare1984+9999@gmail.com" into2 "Email" field
-    And I type "12345678" into2 "Password" field
-   And I click on  button2 with text "Login"
-   And I wait 2 seconds
-   And I click on link with text3 "Start a new application"
-   And I click on link with text3 "Continue"
-   And I click on element with text "Yes"
-   And I click on label "My bureau is not shown"
-   And I click on input button with text "Continue"
-   And I click on button with text "Choose plan"
-   And I wait 2 seconds
-   And I type "asaasa" into "Employer name (legal)" field with input type
-   And I click on element with text "Employer name (known as)"
-    And I wait 2 seconds
-    And I click on button with text "Yes"
-    And I select "1st May 2016" in the drop-down list with label in separate div "What is your initial auto enrolment staging date?"
-    #And I click on input button with text "No"
-    And I select "Public Limited Company" in the drop-down list with label in separate div "What describes your organisation most accurately?"
-    And I click on element with text "If there is no company/charity registration no. please tick this box"
-    And I type "Str.Mihai Viteazu nr.40" into "Company registered address" field with input type
-    And I type "Cluj-Napoca" into "City" field with input type
-    And I type "0989798787" into "Postcode" field with input type
-    And I select "21-30" in the drop-down list with label in separate div "How many employees do you want to include in the NOW: Pensions Plan?"
-    And I type "asdafdsa" into "Primary contact name at company for queries about the Plan" field with input type
-    And I type "testare1984+9999@gmail.com" into "Primary contact email address" field with input type
-    And I type "testare1984+9999@gmail.com" into "Primary contact email address (confirm)" field with input type
-    And I type "Boss" into "Primary contact job title" field with input type
-    And I type "0986735836345683" into "Primary contact phone number" field with input type
-    And I type "045/AB765" into "What is the PAYE Reference of your largest payroll? (if you only have one Payroll, please use that number)" field with input type
-    And I type "Ionut" into "Main payroll contact name" field with input type
-    And I type "testare1984+9999@gmail.com" into "Main payroll contact email" field with input type
-    And I type "testare1984+9999@gmail.com" into "Main payroll contact email (confirm)" field with input type
-    And I type "0987832434" into "Main payroll contact telephone" field with input type
-    #And I type "asdfsda" into "What is the payroll commonly known as?" field with input
-    And I wait 2 seconds
-    And I click on element with text "Continue"
-    #And I select "Fortnightly" in the drop-down list "Payroll Frequency"
+    And I click on element with text "6:30 PM"
+    And I click on element with text "Submit"
+    Then I should see an element with text "Your appointment has been requested. We will contact you shortly to confirm the exact date and time."
+    And I wait 10 seconds
+
+
+  Scenario: Second
+   Given I open "http://kedev2.greencloud.center/?SERVICE=SKIN_CARE"
+   And I click on link with text2 "Hair"
+   And I click on link with text2 "Cutting&Styling"
+   And I click on link with text2 "Braiding"
+   And I click on link with text2 "Best Hair Color Salon"
+   And I click on link with text2 "Kerastase Treatments"
+   And I click on link with text2 "Keratin Treatments&Straightening"
+   And I click on link with text2 "Curling&Perming"
+   And I click on link with text2 "Hair extensions"
+   And I click on link with text2 "Skin Care"
+   And I click on link with text2 "Nail Care"
+   And I click on link with text2 "Metro Mantime"
+   And I click on link with text2 "Teens & Kids"
+   And I click on link with text2 "Weddings and Special Events"
+   And I click on link with text2 "Book an appointment online"
+    And I click on  button with text "New Guest" with switch page
    And I wait 10 seconds
-   
+
+    Scenario: New Guest
+      Given I open "http://kedev2.greencloud.center/?SERVICE=SKIN_CARE"
+      And I click on link with text2 "Book an appointment online"
+      And I wait 5 seconds
+      And I click on  button with switch page "New Guest"
+      And I type "testare1984+00@gmail.com" into "olsNewUserEmailField" with id
+      And I click on  button with switch page "Continue"
+      And I wait 3 seconds
+      And I type "testare1984+00@gmail.com" into "registerEmailAddress" with id
+      And I type "12345678" into "registerPassword1" with id
+      And I type "12345678" into "registerPassword2" with id
+      And I wait 3 seconds
+      And I click on radio button with text "M"
+      And I click on radio button with text "M"
+      And I type "15/06/1987" into "birthDate" with id
+      And I type "John" into "firstName" with id
+      And I type "McDonald" into "lastName" with id
+      And I type "Str.Merafdas nr.6" into "addressLine1" with id
+      And I type "Str.Jhfdfd nr.4" into "addressLine2" with id
+      And I type "fdsafads" into "registrationCity" with id
+      And I type "0504545" into "postalCode" with id
+      And I type "04040454545" into "daytimePhone" with id
+      And I type "045054006556" into "eveningPhone" with id
+      And I type "04505005045" into "cellPhone" with id
+      And I type "9Y6WG6J4FJ" into "verificationCode" with id
+      And I click on  button with switch page "Register"
+      And I wait 20 seconds
+
+    Scenario: line-bar
+        Given I open "http://kedev2.greencloud.center/?SERVICE=SKIN_CARE"
+        And I click on element with line-bar "button-nav"
+        And I wait 10 seconds
+        #And I click on link with text2 "Home"
+        #And I click on element with line-bar "button-nav"
+        #And I wait 2 seconds
+        And I click on link with text2 "Team"
+        And I click on element with line-bar "button-nav"
+        And I wait 2 seconds
+        And I click on link with text2 "Services"
+        And I click on element with line-bar "button-nav"
+        And I wait 2 seconds
+        And I click on link with text2 "Product Line"
+        And I click on element with line-bar "button-nav"
+        And I wait 2 seconds
+        And I click on link with text2 "Blog"
+        And I click on element with line-bar "button-nav"
+        And I wait 2 seconds
+        And I click on link with text2 "Contact"
+        And I click on element with line-bar "button-nav"
+
+
+    Scenario: Sign Up
+      Given I open "http://kedev2.greencloud.center/?SERVICE=SKIN_CARE"
+      And I click on element with line-bar "button-nav"
+      And I wait 3 seconds
+      And I click on link with text2 "SIGN UP"
+      And I type "John" into "joinFirstName" with id
+      And I type "McDonald" into "joinLastName" with id
+      And I type "Testare" into "joinUserName" with id
+      And I type "12345678" into "joinPassword" with id
+      And I type "testare1984@gmail.com" into "joinEmail" with id
+      And I click on button with text "Sign Up"
+      And I wait 10 seconds
+
+
+   Scenario: Log In
+     Given I open "http://kedev2.greencloud.center/?SERVICE=SKIN_CARE"
+     And I click on element with line-bar "button-nav"
+     And I wait 20 second
+     And I click on link with text2 "LOGIN"
+     And I wait 20 seconds
